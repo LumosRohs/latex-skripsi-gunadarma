@@ -1,10 +1,12 @@
-
-\chapter{KESIMPULAN DAN SARAN}
-
+\chapter{PENUTUP}
 
 \section{Kesimpulan}
-% \subsection{Citra Digital}
-\blindtext
+Berdasarkan hasil penelitian yang telah dilakukan untuk identifikasi nilai nutrisi pada makanan populer di Indonesia berbasis citra menggunakan \textit{Convolutional Neural Networ}k (CNN) dengan arsitektur EfficientNetV2, dapat disimpulkan bahwa:
+\begin{enumerate}
+    \item Model \textit{deep learning} berbasis arsitektur EfficientNetV2 berhasil mengklasifikasikan citra makanan dan menampilkan estimasi nilai nutrisinya.
+    \item Model \textit{deep learning} berbasis arsitektur EfficientNetV2 menggunakan Google Colab dengan GPU T4 berhasil mendapatkan nilai \textit{accuracy} sebesar 91,12\% pada data latih dan berhasil mendapatkan nilai \textit{accuracy} sebesar 87,50\% pada data validasi, model juga memiliki rata-rata \textit{precision}, \textit{recall}, dan \textit{F1-Score} sebesar 88\%. Kemudian pengujian model menggunakan DGX A100 berhasil mendapatkan nilai \textit{accuracy} sebesar 91,62\% pada data latih dan berhasil mendapatkan nilai \textit{accuracy} sebesar 87,25\% pada data validasi, model juga memiliki rata-rata \textit{precision} sebesar 87\%, \textit{recall} sebesar 88\%, dan \textit{F1-Score} sebesar 87\%.
+    \item Mesin DGX A100 terbukti dapat melakukan pelatihan model 2x lebih cepat dari Google Colab dengan GPU T4 pada dataset penelitian ini. Model yang dilatih menggunakan Google Colab dengan GPU T4 dengan model yang dilatih menggunakan DGX A100 mempunyai performa dan akurasi yang hampir sama dan tidak berbeda secara signifikan.
+\end{enumerate}
 
 \section{Saran}
-\blindtext
+Saran yang dapat diberikan pada penelitian berikutnya adalah menggunakan arsitektur CNN selain EfficientNetV2, seperti InceptionV3, ResNet, ataupun arsitektur lainnya. Diharapkan penelitian selanjutnya dapat menggunakan teknik \textit{image recognition} agar dapat mengidentifikasi banyak makanan dalam satu citra sehingga informasi nutrisi makanan lebih akurat. Penelitian ini diharapkan juga dapat dikembangkan lagi untuk diintegrasikan ke aplikasi agar lebih mudah digunakan.

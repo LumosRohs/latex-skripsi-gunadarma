@@ -1,6 +1,78 @@
 \chapter{PENDAHULUAN}
 
 \section{Latar Belakang}
+Teknologi berkembang sangat pesat dan memberikan dampak yang besar bagi kehidupan manusia dan masyarakat. Teknologi telah membuat kehidupan manusia dan masyarakat lebih nyaman dan efisien di berbagai bidang seperti ekonomi, pendidikan, komunikasi, transportasi, dan hiburan. Di era digital ini, perkembangan teknologi terus berlanjut dan berkembang sesuai dengan kebutuhan masyarakat dan permasalahan sosial yang semakin kompleks. Perkembangan dan inovasi teknologi yang berkelanjutan dapat membawa manfaat besar bagi manusia dan masyarakat jika dikelola dengan baik.
 
-\blindtext 
-\cite{book:darma}
+Salah satu aspek paling menarik dari perkembangan teknologi ini adalah kemajuan pesat dalam bidang \textit{Artificial Intelligence} (AI). Menurut \cite{abbas2021} Kecerdasan Buatan adalah fenomena sosial dan kognitif fenomena yang memungkinkan mesin untuk berintegrasi secara sosial dengan masyarakat untuk melakukan tugas-tugas kompetitif yang membutuhkan proses kognitif dan berkomunikasi dengan entitas lain dalam masyarakat dengan mengubah pesan dengan konten informasi yang tinggi dan lebih pendek.
+
+Dalam perkembangan AI, salah satu cabang yang paling berpengaruh adalah \textit{Machine Learning} (ML). Menurut \cite{rebala2019} ML adalah bidang ilmu komputer yang mempelajari algoritma dan teknik untuk mengotomatisasi solusi untuk masalah kompleks yang sulit diprogram menggunakan metode pemrograman konvensional. ML telah menjadi komponen penting dalam berbagai aplikasi modern, termasuk pengenalan gambar, analisis data, dan sistem rekomendasi.
+
+\cite{Sarker2021} menjelaskan bahwa ML memiliki berbagai jenis algoritma, termasuk analisis klasifikasi, analisis regresi, pengelompokan data, dan banyak lagi. Algoritma-algoritma ini dapat diterapkan untuk meningkatkan kecerdasan dan kemampuan berbagai aplikasi di dunia nyata. Penerapan ML telah memberikan dampak signifikan dalam berbagai bidang, seperti sistem keamanan siber, kota pintar, perawatan kesehatan, \textit{e-commerce}, pertanian, dan banyak lagi.
+
+Berhubungan dengan kesehatan, nutrisi menjadi semakin diperhatikan oleh masyarakat Indonesia, terutama sejak presiden terpilih Indonesia Prabowo Subianto meluncurkan program untuk menyediakan makanan bergizi dan gratis bagi anak-anak. Inisiatif ini menyoroti pentingnya nutrisi bagi masyarakat Indonesia. Berdasarkan penelitian \cite{fitria2022} yang dilakukan pada 127 siswa di SMA Muhammadiyah 13 Jakarta, sebagian besar siswa Sekolah Menengah Atas (SMA)  Muhammadiyah 13 Jakarta masih memiliki pengetahuan gizi seimbang yang kurang yaitu sebesar 53,5\%. Salah satu pendekatan untuk mengatasi masalah ini yaitu dengan menggunakan teknologi machine learning.
+
+Teknologi machine learning dapat membantu mengatasi masalah ini dengan menyediakan alat untuk mengidentifikasi dan menganalisis kandungan nutrisi dalam makanan, sehingga membantu individu membuat keputusan yang lebih sehat. Salah satu pendekatan yang menjanjikan adalah penggunaan teknologi pengenalan gambar untuk mengklasifikasikan makanan dan mengestimasi kandungan nutrisinya.
+
+Dalam konteks ini, salah satu teknik ML yang sangat efektif untuk analisis gambar adalah \textit{Convolutional Neural Network} (CNN). CNN adalah jaringan saraf tiruan yang terdiri dari beberapa lapisan neuron yang dihubungkan dalam pola tertentu dan dioptimalkan untuk memproses \textit{array} data terstruktur seperti gambar. CNN dirancang untuk secara otomatis dan adaptif mempelajari hierarki spasial dari fitur melalui algoritma \textit{backpropagation} dengan menggunakan beberapa blok bangunan, seperti lapisan konvolusi, lapisan \textit{pooling}, dan lapisan \textit{fully connected} \cite{Yamashita2018}
+
+\textit{Convolutional Neural Network} (CNN) telah terbukti efektif dalam klasifikasi dan pengenalan objek pada citra, termasuk makanan. \cite{rajayogi2019} mengklasifikasikan citra makanan untuk program diet dan ekstraksi kalori berbasis citra. Penelitian ini menggunakan dataset makanan India yang terdiri dari 20 kelas dan mempunyai 500 citra untuk setiap kelas. Penelitian ini menggunakan teknik \textit{transfer learning} serta menggunakan beberapa model yakni InceptionV3, VGG16, VGG19, dan ResNet untuk mengawasi kebiasaanmakan agar pola hidup lebih sehat. Nilai akurasi tertinggi yang didapatkan yakni 87,9\% dan loss rate 0,5893 dari model InceptionV3 dibandingkan model yang lain seperti VGG19 yang mendapatkan nilai akurasi 78,9\%, VGG16 78,2\%, dan ResNet 69,91\%.
+
+Arsitektur EfficientNetV2 merupakan pengembangan terbaru dari CNN yang menawarkan performa tinggi dengan efisiensi komputasi yang lebih baik. Arsitektur EfficientNetV2 merupakan salah satu model pengolahan citra keluaran baru yakni pada tahun 2021 dari keluarga EfficientNet. EfficientNetV2 memiliki 11x lebih cepat dalam pelatihan dan model yang 6.8x lebih kecil \cite{tan2021}. \cite{karthik2022} melakukan klasifikasi citra untuk mengidentifikasi penyakit kulit yang dilakukan pada empat kelas dengan menggunakan model EfficientNetV2 dan model ini mendapatkan nilai akurasi pengujian keseluruhan sebesar 84,70\%. Dataset terdiri dari 10.399 data latih dan 3.465 data uji.
+
+Dengan latar belakang ini, penelitian ini bertujuan untuk mengembangkan sistem klasifikasi citra makanan populer di Indonesia menggunakan CNN dengan arsitektur EfficientNetV2 untuk mengetahui kandungan nutrisinya, terutama kalori.
+
+\section{Rumusan Masalah}
+Berdasarkan latar belakang diatas maka dapat dirumuskan masalah pada tulisan ini sebagai berikut:
+\begin{enumerate}
+    \item Bagimana melakukan indentifikasi nilai nutrisi menggunakan klasifikasi citra pada citra makanan populer Indonesia menggunakan metode \textit{Convolutional Neural Network} (CNN) dengan arsitektur EfficientNetV2?
+    \item Bagaimana tingkat akurasi yang dihasilkan dari klasifikasi citra makanan populer di Indonesia menggunakan metode \textit{Convolutional Neural Network} (CNN) dengan arsitektur EfficientNetV2?
+\end{enumerate}
+
+\section{Batasan Masalah}
+Berdasarkan latar belakang dan rumusan masalah yang telah dijelaskan dalam penulisan ini, terdapat 7 batasan masalah, yaitu:
+\begin{enumerate}
+    \item Data citra yang digunakan adalah citra berbagai jenis makanan yang dikumpulkan dari \textit{google images}.
+    \item Data citra yang dikumpulkan terdiri dari 10 jenis makanan dengan 200 citra tiap jenis makanan dengan total 2000 data citra.
+    \item Data citra terbagi mejadi data latih sebesar 80\% dan data validasi sebesar 20\%.
+    \item Bahasa pemrograman yang digunakan adalah Python.
+    \item Klasifikasi Citra dilakukan menggunakan metode \textit{Convolutional Neural Network} dengan arsitektur EfficientNetV2.
+    \item Data nutrisi makanan diambil dari situs nilaigizi.com.
+    \item Data nutrisi makanan merupakan data per porsi atau per 100 gram.
+\end{enumerate}
+
+\section{Tujuan Penelitian}
+Berdasarkan permasalahan yang telah dijabarkan, tujuan dari penulisan tugas ini antara lain:
+\begin{enumerate}
+    \item Menghasilkan model \textit{deep learning} berbasis arsitektur EfficientNetV2 yang dapat mengklasifikasikan citra makanan dan mengetahui nilai nutrisinya.
+    \item Menghasilkan performa model \textit{deep learning} berbasis arsitektur EfficientNetV2 dengan minimum akurasi 80\%.
+    \item Mengetahui perbedaan akurasi model menggunakan Google Colab \textit{Graphics Processing Unit} (GPU) T4 dengan \textit{High Perfomance Computing} (HPC) DGX A100.
+\end{enumerate}
+
+\section{Metode Penelitian}
+Terdapat 4 tahapan yang dilakukan pada penelitian ini agar penelitian dapat berjalan dengan baik dan sesuai tujuan, yaitu sebagai berikut:
+\begin{enumerate}
+    \item \textbf{Pengumpulan Dataset}
+    \item[] Tahap pertama yang dilakukan pada penelitian ini adalah mengumpulkan data citra dari \textit{google images}. Data citra yang digunakan terdiri dari 10 jenis makanan Indonesia yang populer, yaitu ayam bakar, bakso, gado-gado, gudeg, nasi goreng, pempek, rawon, rendang, sate, dan soto. Penulis membagi dataset dengan rasio 80\% data latih dan 20\% data validasi.
+    \item \textbf{Data Preprocessing}
+    \item[] Tahap ini melakukan serangkaian proses berupa \textit{image normalization} dan \textit{image augmentation}. Citra yang diperoleh kemudian dinormalisasi dan diolah menggunakan \textit{image augmentation} yang bertujuan untuk memperbanyak jumlah citra pada data latih.
+    \item \textbf{Pembuatan dan Pelatihan Model}
+    \item[] Tahap ini melalui serangkaian proses berupa pembuatan model dan pelatihan model. Proses pembuatan model menggunakan metode \textit{transfer learning} guna mempersingkat waktu perancangan model dan meningkatkan akurasi. Tahapan proses pelatihan model mengimplementasikan perancangan model EfficientNetV2 yang telah dibuat dengan melakukan pelatihan terhadap dataset hasil \textit{preprocessing} yang berupa citra makanan.
+    \item \textbf{Pengujian Model}
+    \item[] Penulis menguji model dengan data validasi yang sebanyak 400 data citra. Pengujian model memiliki tujuan untuk mengetahui keberhasilan proses pelatihan model dilakukan pada data citra baru. Hasil pengujian model menjadi standar penulis untuk mengukur kinerja model. Proses pengukuran performa model berdasarkan perhitungan 4 jenis metrik, yaitu \textit{accuracy}, \textit{precission}, \textit{recall}, dan \textit{F-1 score}.
+\end{enumerate}
+
+\section{Sistematika Penulisan}
+Sistematika pada penulisan ini dibagi ke dalam lima bab yang akan dituliskan berurut, dimana setiap bab memiliki prosedur-prosedur yang akan dibahas, yaitu:
+
+\begin{itemize}[label={\phantom{•}}]
+    \item \textbf{BAB I PENDAHULUAN}
+    \item[] Pada bab pendahuluan terdapat informasi mengenai, latar belakang masalah, rumusan masalah, batasan masalah, tujuan penelitian, metode penelitian dan sistematika penulisan.
+    \item \textbf{BAB II TINJAUAN PUSTAKA}
+    \item[] Pada bab ini berisi informasi mengenai teori-teori pendukung yang menjadi sumber informasi pada penelitian ini, selain itu terdapat penjelasan-penjelasan singkat mengenai \textit{software} pendukung penelitian.
+    \item \textbf{BAB III METODE PENELITIAN}
+    \item[] Bab ini berisi penjelasan langkah-langkah dalam penelitian dan gambaran umum dalam membangun model \textit{deep learning} dari penelitian serta penjelasan kode yang digunakan.
+    \item \textbf{BAB IV HASIL DAN PEMBAHASAN}
+    \item[] Bab ini merupakan bagian yang membahas tentang hasil pengolahan data dan analisa pada model yang telah dirancang serta hasil uji coba dari program.
+    \item \textbf{BAB V PENUTUP}
+    \item[] Pada bab penutup meliputi kesimpulan dan saran, kesimpulan akan berkaitan mengenai keberhasilan penelitian terhadap tujuan penelitian yang dilakukan serta saran-saran berisi informasi langkah yang mungkin dapat menjadi penyempurnaan pada penelitian yang dilakukan.
+\end{itemize}

@@ -1,0 +1,88 @@
+\documentclass{lib/skripsi}
+
+\usepackage{blindtext}
+\usepackage{longtable}
+
+\begin{document}
+    % COVER
+    \pagenumbering{roman}
+    \addcontentsline{toc}{chapter}{COVER}
+    \input{include/cover.tex}
+
+    % Pernyataan Originalitas
+    \addcontentsline{toc}{chapter}{PERNYATAAN ORIGINALITAS DAN PUBLIKASI}
+    \input{include/pernyataan-originalitas.tex}
+    
+    % Lembar Pengesahan
+    \addcontentsline{toc}{chapter}{LEMBAR PENGESAHAN}
+    \input{include/lembar-pengesahan.tex}
+
+    % ABSTRAK
+    \addcontentsline{toc}{chapter}{ABSTRAK}
+    \input{include/abstrak.tex}
+
+    % ABSTRACT
+    \addcontentsline{toc}{chapter}{ABSTRACT}
+    \input{include/abstract.tex}
+
+    % KATA PENGANTAR
+    \addcontentsline{toc}{chapter}{KATA PENGANTAR}
+    \input{include/kata-pengantar.tex}
+    \pagebreak
+
+    %===========================================================
+    % Daftar isi, daftar gambar, daftar tabel
+    %-----------------------------------------------------------
+    \addcontentsline{toc}{chapter}{DAFTAR ISI}
+    \tableofcontents
+    \pagebreak
+
+    \addcontentsline{toc}{chapter}{DAFTAR TABEL}
+    \listoftables
+    \pagebreak
+
+    \addcontentsline{toc}{chapter}{DAFTAR GAMBAR}
+    \listoffigures
+    \pagebreak
+
+    %\addcontentsline{toc}{chapter}{DAFTAR LAMPIRAN}
+    %\listofappendices
+    %\pagebreak
+
+    \pagenumbering{arabic}
+    %-----------------------------------------------------------
+    % End Daftar isi, daftar gambar, daftar tabel
+    %===========================================================
+
+    %===========================================================
+    % Daftar masukan untuk Bab
+    %-----------------------------------------------------------
+    \input{include/bab1.tex}
+    \input{include/bab2.tex}
+    \input{include/bab3.tex}
+    \input{include/bab4.tex}
+    \input{include/bab5.tex}
+    %-----------------------------------------------------------
+    % End Daftar masukan untuk Bab
+    %===========================================================
+
+    %===========================================================
+    % Daftar Pustaka
+    %-----------------------------------------------------------
+    \addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
+    \printbibliography[title={DAFTAR PUSTAKA}]
+    \pagebreak
+    %-----------------------------------------------------------
+    % End Daftar Pustaka
+    %===========================================================
+    
+    %===========================================================
+    % Daftar Lampiran
+    %-----------------------------------------------------------
+    \addcontentsline{toc}{chapter}{LAMPIRAN}
+    \input{include/lampiran.tex}
+    %-----------------------------------------------------------
+    % End Daftar Lampiran
+    %===========================================================
+
+\end{document}
